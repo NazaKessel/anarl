@@ -15,11 +15,9 @@
                 Especialidades
             </a>
 
-            {{--
             <a href="{{ route('medicos.index') }}" class="hover:underline">
-                <Médicos
+                Médicos
             </a>
-            --}}
         </div>
     </nav>
 

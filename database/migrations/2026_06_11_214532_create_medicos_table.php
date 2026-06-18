@@ -20,8 +20,6 @@ return new class extends Migration
         $table->string('telefono')->nullable();
         $table->string('email')->unique()->nullable();
 
-        $table->string('matricula')->unique();
-
         $table->foreignId('especialidad_id')
               ->constrained('especialidades');
 

@@ -22,14 +22,14 @@ class EspecialidadController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-    'nombre' => 'required|max:100|unique:especialidades,nombre',
-    'descripcion' => 'nullable'
-]);
+            'nombre' => 'required|max:100|unique:especialidades,nombre',
+            'descripcion' => 'nullable'
+        ]);
 
         Especialidad::create([
             'nombre' => $request->nombre,
             'descripcion' => $request->descripcion
-        ]);
+        ]); 
 
         return redirect()->route('especialidades.index');
     }
