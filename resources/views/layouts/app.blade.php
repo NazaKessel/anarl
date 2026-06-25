@@ -32,5 +32,15 @@
                 {{ $slot }}
             </main>
         </div>
-    </body>
+
+
+
+</head>
+<body>
+
+<div class="card">
+    @yield('content')
+</div>
+
+</body>
 </html>

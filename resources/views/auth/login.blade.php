@@ -2,7 +2,14 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <div class="logo">
+        <h3>Anarl</h3>
+    </div>
+
+    <div >
+
+    </div>
+    <form method="POST" action="{{ route('login') }}" class="card">
         @csrf
 
         <!-- Email Address -->
@@ -45,3 +52,100 @@
         </div>
     </form>
 </x-guest-layout>
+
+
+
+        <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f9d58,#34c759);
+        }
+
+        .card{
+            background:white;
+            width:400px;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,.2);
+        }
+
+        .logo{
+            text-align:center;
+            color:#0f9d58;
+            font-size:2rem;
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#777;
+            margin-bottom:30px;
+        }
+
+        .form-group{
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:600;
+            color:#333;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:2px solid #e0e0e0;
+            border-radius:10px;
+            outline:none;
+            transition:.3s;
+        }
+
+        input:focus{
+            border-color:#0f9d58;
+        }
+
+        .btn{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            background:#0f9d58;
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#0c8048;
+        }
+
+        .link{
+            text-align:center;
+            margin-top:20px;
+        }
+
+        .link a{
+            text-decoration:none;
+            color:#0f9d58;
+            font-weight:bold;
+        }
+
+        .link a:hover{
+            text-decoration:underline;
+        }
+    </style>
