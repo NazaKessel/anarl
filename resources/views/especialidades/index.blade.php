@@ -14,7 +14,7 @@
 
 <div class="flex justify-end mb-4">
     <a href="{{ route('especialidades.create') }}"
-       class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
         Nueva Especialidad
     </a>
 </div>
@@ -32,7 +32,7 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody">
 
             @forelse($especialidades as $especialidad)
 
